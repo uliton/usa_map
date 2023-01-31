@@ -1,6 +1,6 @@
 {
-  "homepage": ".",
-  "name": "USA",
+  "homepage": "https://uliton.github.io/usa_map/",
+  "name": "usa_map",
   "version": "0.1.0",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

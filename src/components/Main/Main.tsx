@@ -2,26 +2,25 @@ import React, { useState } from "react";
 import states from "../../framework/states.json";
 import { MapUSA } from "../MapUSA";
 
-import './Test.scss';
+import './Main.scss';
 
-export const Test: React.FC = () => {
+export const Main: React.FC = () => {
   const [countyAbbreviation, setCountyAbbreviation] = useState('');
 
   const stateInfo = states.find(state => state.abbreviation === countyAbbreviation) || '';
-  // console.log(stateInfo);
 
   // #223C2B green
   // #C4C4C4 grey
   return (
-    <div className="test">
-      <div className="test__map">
+    <div className="main">
+      <div className="main__map">
         <MapUSA
           countyId={countyAbbreviation}
           setCountyId={setCountyAbbreviation}
         />
       </div>
 
-      <div className="test__info">
+      <div className="main__info">
         {stateInfo 
           ? (
             <div className="info">
@@ -33,8 +32,8 @@ export const Test: React.FC = () => {
                 {stateInfo.capital.name}
               </span>
 
-              <span className="info">
-                coordinate: {stateInfo.capital.lat}, {stateInfo.capital.long}
+              <span className="info--coordinate">
+                {stateInfo.capital.lat}, {stateInfo.capital.long}
               </span>
 
               <span className="info--fun">

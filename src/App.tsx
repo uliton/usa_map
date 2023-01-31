@@ -1,15 +1,14 @@
 import React from "react";
 import { Routes, Route } from 'react-router';
-
-import { Test } from "./components/Test/Test";
+import { Main } from "./components/Main";
 
 export const App: React.FC = () => {
   return (
     <div className="app">
       <Routes>
-        <Route path="/" element={<Test />} />
-        <Route path="/test" element={<Test />} />
-        <Route path="*" element={<Test />} />
+        <Route path="/" element={<Main />} />
+        <Route path="/test" element={<Main />} />
+        <Route path="*" element={<Main />} />
       </Routes>
     </div>
   );

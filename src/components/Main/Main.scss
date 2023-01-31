@@ -1,0 +1,104 @@
+@mixin on390 {
+  @media (min-width: 390px) {
+    @content;
+  }
+}
+
+@mixin on414 {
+  @media (min-width: 414px) {
+    @content;
+  }
+}
+
+@mixin on786 {
+  @media (min-width: 786px) {
+    @content;
+  }
+}
+
+@mixin on1024 {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin on1280 {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+.main {
+  max-width: 1280px;
+  margin: auto;
+
+  &__map {
+    display: flex;
+    justify-content: center;
+    padding-top: 8px; //
+  }
+
+  &__info {
+    font-weight: 300;
+    color: #1C1A59;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 30px;
+  font-size: 5px;
+
+  @include on390 {
+    padding: 8px 40px;
+    font-size: 6px;
+  }
+
+  @include on414 {
+    padding: 12px 60px;
+    font-size: 8px;
+  }
+
+  @include on786 {
+    padding: 12px 80px;
+    font-size: 12px;
+  }
+
+  @include on1024 {
+    padding: 12px 120px;
+    font-size: 16px;
+  }
+
+  @include on1280 {
+    padding: 12px 120px;
+    font-size: 20px;
+  }
+
+  &--state {
+    &::before {
+      content: "State: ";
+      font-weight: bold;
+    }
+  }
+
+  &--capital {
+    &::before {
+      content: "Capital of state: ";
+      font-weight: bold;
+    }
+  }
+  &--coordinate {
+    &::before {
+      content: "Coordinate: ";
+      font-weight: bold;
+    }
+  }
+
+  &--fun {
+    &::before {
+      content: "Fun fact: ";
+      font-weight: bold;
+    }
+  }
+}

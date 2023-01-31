@@ -1,4 +1,4 @@
 # USA Map
 
-## [DEMO LINK](https://uliton.github.io/USA/)
+## [DEMO LINK](https://uliton.github.io/usa_map/)
 
